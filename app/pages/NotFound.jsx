@@ -11,7 +11,7 @@ const NotFound = () => {
     >
       <h1 className="text-6xl font-extrabold">404</h1>
       <p className="text-lg text-gray-500">
-        Sorry, the page you're looking for doesn't exist.
+        {"Sorry, the page you're looking for doesn't exist."}
       </p>
 
       <BackButton onClick={() => navigate("/")}>Go Back to Home</BackButton>
