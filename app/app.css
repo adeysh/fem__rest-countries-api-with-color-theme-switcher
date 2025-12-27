@@ -1,15 +1,72 @@
+/* Nunito Sans font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* colors */
+  /* Neutral palette */
+  --blue-900: hsl(209, 23%, 22%);
+  --blue-950: hsl(207, 26%, 17%);
+  --grey-950: hsl(200, 15%, 8%);
+  --grey-400: hsl(0, 0%, 50%);
+  --grey-50: hsl(0, 0%, 99%);
+  --white: hsl(0, 100%, 100%);
+
+  /* fonts */
+  --font-sans: "Nunito Sans", sans-serif;
+  /* font weights: 300 (light), 600 (semibold), 800 (bold) */
+  /* icons: Ionicons */
+
+  /* gap */
+  --country-details-gap: clamp(
+    3rem,
+    1.5714285714285716rem + 7.142857142857142vw,
+    8rem
+  );
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+:root {
+  /* light mode */
+  --color-text: var(--grey-950);
+  --color-input: var(--grey-400);
+  --color-bg: var(--grey-50);
+  --color-element: var(--white);
+  --color-top-bar: var(--grey-950);
+  --color-skeleton: hsl(0, 0%, 85%);
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.dark {
+  /* dark mode */
+  --color-text: var(--white);
+  --color-bg: var(--blue-950);
+  --color-element: var(--blue-900);
+  --color-top-bar: var(--color-white);
+  --color-skeleton: hsl(209, 23%, 30%);
+}
+
+.grid-rows-subgrid {
+  grid-template-rows: subgrid;
+  gap: 0;
+}
+
+/* footer */
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-text);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  color: hsl(228, 45%, 55%);
+  transition: color 0.3s ease;
 }
