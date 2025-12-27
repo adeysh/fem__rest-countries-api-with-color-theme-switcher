@@ -46,15 +46,18 @@ const RegionFilter = () => {
         break;
 
       case "Enter":
+      case " ": {
         e.preventDefault();
         const value = activeIndex === 0 ? null : items[activeIndex];
         handleSelect(value);
         break;
+      }
 
-      case "Escape":
+      case "Escape": {
         setOpen(false);
         setActiveIndex(-1);
         break;
+      }
     }
   }
 

@@ -15,8 +15,8 @@ const Icon = ({
       suppressHydrationWarning
       name={name}
       role={isDecorative ? undefined : "img"}
-      aria-hidden={isDecorative}
-      aria-label={label}
+      aria-hidden={isDecorative ? "true" : undefined}
+      aria-label={isDecorative ? undefined : label}
       style={{ fontSize: size, color: color }}
       className={clsx("inline-block", className)}
       {...props}

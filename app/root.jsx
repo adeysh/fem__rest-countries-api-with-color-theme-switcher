@@ -34,6 +34,7 @@ export function Layout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>REST Countries API with color theme switcher</title>
 
         {/* Ionicons (global) */}
         <script

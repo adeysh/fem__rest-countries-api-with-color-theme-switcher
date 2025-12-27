@@ -58,7 +58,7 @@
   bottom: 5px;
   left: 0;
   right: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
   color: var(--color-text);
 }
@@ -69,4 +69,10 @@
 .attribution a:hover {
   color: hsl(228, 45%, 55%);
   transition: color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
 }
